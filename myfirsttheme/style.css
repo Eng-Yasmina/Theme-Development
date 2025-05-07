@@ -1,0 +1,64 @@
+/*
+Theme Name : My First Theme
+Theme URI : http://example.com
+Author : Your Name
+Author URI : http://example.com
+Description : This is my first WordPress theme.
+Version : 1.0
+License : GNU General Public License v2 or later
+License URI : http://www.gnu.org/licenses/gpl-2.0.html
+Tags : custom-background, custom-header, custom-logo, custom-menu, featured-images, post-formats, theme-options
+Text Domain : myfirsttheme
+*/
+/* Add your CSS styles below */
+body {
+    font-family: Arial, sans-serif;
+    background-color: red;
+    color: #333;
+}
+h1, h2, h3 {
+    color: #333;
+}
+a {
+    color: #0073aa;
+}
+a:hover {
+    color: #005177;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #213e4b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* Add your custom styles here */
+/* Example: Change the background color of the header */
