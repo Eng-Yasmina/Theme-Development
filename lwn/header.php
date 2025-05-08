@@ -11,7 +11,7 @@
         <nav id="main-nav">
             <div class="container">
                 <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
-           
+                <?php wp_nav_menu(array('theme_location' => 'primary')); ?>
             </div>
 
         </nav>
