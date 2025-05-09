@@ -1,4 +1,13 @@
 <?php get_header(); ?>
+<header id="main-header">
+    <h1>Search Results for: <?php echo get_search_query(); ?></h1>
+    <p id="searchform">Search for: <?php get_search_form(); ?></p>
+</header>
+<?php if (have_posts()) : ?>
+    <p>Found <?php echo $wp_query->found_posts; ?> results</p>
+<?php else : ?>
+    <p>No results found for "<?php echo get_search_query(); ?>"</p>
+<?php endif; ?>
     <section>
         <h2>Search results</h2>
         <?php if(have_posts()) : ?>
@@ -11,14 +20,6 @@
                     <p>Categories: <?php the_category(', '); ?></p>
                     <p>Tags: <?php the_tags('', ', '); ?></p>
                     <p><?php the_post_thumbnail(); ?></p>
-                    <p><?php the_content(); ?></p>
-                    <p>Comments: <?php comments_number(); ?></p>
-                    <p>Comments: <?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></p>
-                    <p>Share: 
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>">Facebook</a> | 
-                        <a href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>">Twitter</a> | 
-                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>">LinkedIn</a>
-                    </p>
                 </article>
             <?php endwhile; ?>
         <?php else : ?>
