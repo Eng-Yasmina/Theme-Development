@@ -17,7 +17,6 @@ Text Domain: lwn
     --text-color: #333;
     --header-background-color: #213e4b;
     --footer-background-color: #333;
-    --max-width: 90%;
 }
 
 /* Reset styles */
@@ -44,6 +43,9 @@ a {
 }
 a:hover {
     color: var(--secondary-color);
+}
+li {
+    list-style: none;
 }
 /* Header styles */
 header {
@@ -89,17 +91,31 @@ footer {
     position: fixed;
     bottom: 0;
     font-weight: bold;
-}
-/* Footer styles */
-footer {
-    background-color: var(--footer-background-color);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
+#main-footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+#main-footer .footer-container>*:last-child {
+    grid-column: 1/span 3;
+    text-align: center;
+}
+.lwn-widget h4 {
+    border-bottom: 1px dotted #696767;
+    color: rgb(212, 95, 95);
+    padding: 10px;
+    text-align: center;
+    width: 70%;
+}
+.lwn-widget li {
+    color: rgb(212, 95, 95);
+    padding: 10px;
+    text-align: center;
+    width: 70%;
+}
+
 
 /* Responsive styles */
 @media (max-width: 768px) {
