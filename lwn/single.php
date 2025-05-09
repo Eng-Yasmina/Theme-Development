@@ -27,6 +27,7 @@
         <?php else : ?>
             <p>No posts found.</p>
         <?php endif; ?>
+        <?php get_template_part('pagination'); ?>
     </div>
 
     <div class="sidebar">
