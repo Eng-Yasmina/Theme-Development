@@ -1,4 +1,73 @@
 <?php
+// Add theme support for post thumbnails
+add_theme_support('post-thumbnails');
+// add_theme_support('title-tag');
+// add_theme_support('custom-logo', array(
+//     'height'      => 100,
+//     'width'       => 400,
+//     'flex-height' => true,
+//     'flex-width'  => true,
+// ));
+// add_theme_support('custom-background', array(
+//     'default-color' => 'ffffff',
+//     'default-image' => '',
+// ));
+// add_theme_support('custom-header', array(
+//     'default-image' => '',
+//     'width'         => 1000,
+//     'height'        => 250,
+//     'flex-width'    => true,
+//     'flex-height'   => true,
+// ));
+// add_theme_support('html5', array(
+//     'search-form',
+//     'comment-form',
+//     'comment-list',
+//     'gallery',
+//     'caption',
+//     'script',
+//     'style',
+// ));
+// add_theme_support('automatic-feed-links');
+// add_theme_support('customize-selective-refresh-widgets');
+// add_theme_support('editor-styles');
+// add_editor_style('assets/css/editor-style.css');
+// add_theme_support('responsive-embeds');
+// add_theme_support('align-wide');
+// add_theme_support('editor-color-palette', array(
+//     array(
+//         'name'  => __('Strong Magenta', 'themeLangDomain'),
+//         'slug'  => 'strong-magenta',
+//         'color' => '#a2006d',
+//     ),
+//     array(
+//         'name'  => __('Light Grayish Magenta', 'themeLangDomain'),
+//         'slug'  => 'light-grayish-magenta',
+//         'color' => '#d0a6c1',
+//     ),
+// ));
+// add_theme_support('editor-font-sizes', array(
+//     array(
+//         'name'      => __('Small', 'themeLangDomain'),
+//         'shortName' => __('S', 'themeLangDomain'),
+//         'size'      => 12,
+//         'slug'      => 'small',
+//     ),
+//     array(
+//         'name'      => __('Regular', 'themeLangDomain'),
+//         'shortName' => __('M', 'themeLangDomain'),
+//         'size'      => 16,
+//         'slug'      => 'regular',
+//     ),
+//     array(
+//         'name'      => __('Large', 'themeLangDomain'),
+//         'shortName' => __('L', 'themeLangDomain'),
+//         'size'      => 36,
+//         'slug'      => 'large',
+//     ),
+// ));
+
+///////////////ENQUEUE SCRIPTS AND STYLES//////////////
 add_action('wp_enqueue_scripts','enqueue_assets');
 function enqueue_assets () {
     wp_enqueue_style('lwn-style', get_stylesheet_uri());
