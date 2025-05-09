@@ -115,5 +115,14 @@ function lwn__register_widgets() {
         'before_title'  => '<h4 class="widget-title">',
         'after_title'   => '</h4>',
     ) );
+    register_sidebar( array(
+        'name'          => __( 'Sidebar', 'textdomain' ),
+        'id'            => 'sidebar-1',
+        'description'   => __( 'Add widgets here.', 'textdomain' ),
+        'before_widget' => '<div id="%1$s" class="widget lwn-widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>',
+    ) );
 }
 // ////////////////////////////
