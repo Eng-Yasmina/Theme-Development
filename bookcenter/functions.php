@@ -7,6 +7,9 @@ function bookcenter_enqueue_styles() {
 add_action('wp_enqueue_scripts', 'bookcenter_enqueue_styles');
 
 
+// Add theme support for post thumbnails
+add_theme_support('post-thumbnails');
+
 
 /**
  * Register a custom post type called "book".
