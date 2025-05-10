@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="<?php bloginfo('description'); ?>">
+<html>
+    <head>
     <title><?php bloginfo('name'); ?></title>
+    <meta name="description" content="<?php bloginfo('description'); ?>">
     <?php wp_head(); ?>
-</head>
+    </head>
 <body>
-    <header id="main-header">
-        <div class="container">
-            <h1>
-                <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
-                    <?php bloginfo('name'); ?>
-                </a>
-            </h1>
-            <p><?php bloginfo('description') ?></p>
-            <ul>
-                <li><a href="">Educational</a></li>
-                <li><a href="">Children</a></li>
-                <li><a href="">Programming</a></li>
-                <li><a href="">Novels</a></li>
-            </ul>
+    <header id="main-header" class="py-1 my-1">
+        <div class="container bg-white text-center">
+            <?php if (is_home() || is_front_page()): ?>
+                <h1>
+                    <a href="<?php echo site_url(); ?>" class="website-title">
+                        <?php bloginfo('name'); ?>
+                    </a>
+                </h1>
+            <?php else: ?>
+                <p class="display-h1">
+                    <a href="<?php echo site_url(); ?>" class="website-title">
+                        <?php bloginfo('name'); ?>
+                    </a>
+                </p>          
+            <?php endif; ?>
+
+            <p><?php bloginfo('description'); ?></p>
+
+
         </div>
     </header>
